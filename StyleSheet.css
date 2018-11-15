@@ -1,0 +1,38 @@
+﻿body {
+    font-size: 20px;
+    background-color:darkcyan;
+}
+
+#header, .mainDiv, footer{
+    margin: 0 auto;
+    text-align: center;
+    width:35%;
+}
+
+form{
+    margin:30px auto;
+    text-align: center;
+    width:50%;
+    background-color: cornflowerblue;
+}
+
+
+.submit{
+    background-color: cornflowerblue!important;
+}
+
+.fanpage{
+    color:midnightblue;
+}
+
+.confirmation{
+    text-align:center;
+}
+
+.breadcrumb{
+    font-weight:bold;
+}
+
+li{
+    text-align:left;
+}

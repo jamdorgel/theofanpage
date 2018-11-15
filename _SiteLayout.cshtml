@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    <link href="~/StyleSheet.css" type="text/css" rel="stylesheet" />
+    <link href="~/css/app.css" type="text/css" rel="stylesheet" />
+    <script src="~/js/vendor/foundation.js"></script>
+    <script src="~/js/app.js"></script>
+</head>
+<body>
+    <div id="header">
+        <a href="~/Main.cshtml">Home </a> |
+        <a href="~/About.cshtml"> About </a> |
+        <a href="~/TheoFave.cshtml"> Theo's Faves </a> |
+        <a href="~/Form.cshtml"> Sign Up! </a>
+
+    </div>
+    @RenderBody()
+    <div class="mainDiv">
+        @RenderSection("mainDiv", true)
+    </div>
+    <br/><br/><br/><br/>
+    <footer><p>Jam Costigan - C# Assignment</p></footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Sign Up";
+}
+
+@{
+    Validation.RequireField("name", "name required");
+    Validation.RequireField("email", "email required");
+
+    if (IsPost)
+    {
+        string name, email;
+
+        if (Validation.IsValid())
+        {
+
+            name = Request.Form["name"];
+            email = Request.Form["email"];
+            <text>
+                <p class="confirmation">
+                    Thank you @name, your email @email is now signed up!
+                </p>
+            </text>
+        }
+    }
+}
+
+@section mainDiv {
+     
+    <br/>
+<div class="breadcrumb">
+    <a href="~/Main.cshtml">Home</a> > <a href="~/Form.cshtml">Sign Up</a>
+</div>
+    <br />
+    <div><img src="http://i64.tinypic.com/2uff61c.jpg"</div>
+
+    <form method="post">
+        <fieldset>
+            <legend> Sign Up For An Email Newsletter! </legend>
+            <div>
+                <label>Name:</label>
+                <input type="text" name="name" value=@Request.Form["name"] />
+                @Html.ValidationMessage("name")
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" name="email" value=@Request.Form["email"] />
+                @Html.ValidationMessage("email")
+            </div>
+            <div>
+                <input type="submit" value="submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+
+}
